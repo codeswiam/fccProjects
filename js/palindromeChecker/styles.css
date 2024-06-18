@@ -1,0 +1,98 @@
+:root {
+    --dark-purple: #5A639C;
+    --less-darker-purple: #7776B3;
+    --light-purple: #9B86BD;
+    --light-pink: #E2BBE9;
+    --white: white;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-purple);
+}
+
+main {
+    height: 40%;
+    min-height: fit-content;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h1 {
+    color: var(--light-pink);
+}
+
+main > div {
+    min-height: 150px;
+    width: 400px;
+    padding: 20px;
+    background-color: var(--less-darker-purple);
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+#form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+label {
+    text-align: start;
+}
+
+#text-input {
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: var(--dark-purple);
+}
+
+#button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#check-btn {
+    width: 150px;
+    height: 30px;
+    font-size: large;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: var(--light-pink);
+}
+
+strong {
+    color: var(--light-pink);
+}
+
+#result-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
