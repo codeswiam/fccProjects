@@ -1,5 +1,5 @@
 const numberInput = document.getElementById('number');
-const convertBtn = document.getElementById('convert-btn');
+const outputContainer = document.getElementById('output-container');
 const form = document.getElementById('form');
 const output = document.getElementById('output');
 
@@ -10,6 +10,7 @@ const isNumberPositive = (num) => (num > 0);
 const isNumberTooBig = (num) => (num >= 4000);
 
 const showOutput = (msg) => {
+    outputContainer.classList.add("error");
     output.innerText = msg;
 }
 
@@ -51,7 +52,7 @@ const convert = () => {
         showOutput("Please enter a number less than or equal to 3999");
         return;
     }
-
+    outputContainer.classList.remove("error");
     output.innerText = convertToRoman(number);
 }
 
