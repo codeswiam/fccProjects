@@ -8,7 +8,9 @@ const form = document.getElementById('form');
 // clear input and result
 const clearResults = () => {
     telNumber.textContent = "";
+    telNumber.style.display = "none";
     resultsDiv.textContent = "";
+    resultsDiv.style.display = "none";
 }
 
 const clearInput = () => {
@@ -32,13 +34,15 @@ const checkTelephoneNumber = () => {
     // retrieve user input and display it on screen
     const number = userInput.value;
     telNumber.textContent = number;
+    telNumber.style.display = "block";
 
     // print the result based on the validity of the number
     if (isNumberValid(number)) {
-        resultsDiv.textContent = `Valid US number: ${number}`;
+        resultsDiv.textContent = `okay thanks!! i'll call it later`;
     } else {
-        resultsDiv.textContent = `Invalid US number: ${number}`;
+        resultsDiv.textContent = `babe that's not a number`;
     }
+    resultsDiv.style.display = "block";
 };
 
 form.addEventListener('submit', (e) => {
