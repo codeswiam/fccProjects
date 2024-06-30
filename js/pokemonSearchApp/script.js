@@ -72,14 +72,13 @@ form.addEventListener("submit", (e) => {
     const searchInput = input.value;
     let url = false;
 
-    if (!/^[a-zA-Z0-9-]+$/.test(searchInput)) {
-        alert("Pokémon not found"); return;
-    }
-
     if (!isNaN(parseInt(searchInput))) { // id input
         const pokemonID = parseInt(searchInput);
         url = searchForPokemonID(pokemonDataArr, pokemonID);
     } else {
+        if (!/^[a-zA-Z-]+$/.test(searchInput)) {
+            alert("Pokémon not found"); return;
+        }
         const pokemonName = searchInput;
         url = searchForPokemonName(pokemonDataArr, pokemonName.toLowerCase());
     }
