@@ -1,0 +1,201 @@
+:root {
+    --navy-blue: #050C9C;
+    --dim-blue: #3572EF;
+    --light-blue: #3ABEF9;
+    --baby-blue: #A7E6FF;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--light-blue);
+    font-family: "Rubik", sans-serif;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 50px;
+    background-color: var(--light-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* main */
+main {
+    min-width: 900px;
+    height: 550px;
+    padding: 20px;
+    background-color: var(--navy-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 10px 10px 0 var(--baby-blue);
+}
+
+h1 {
+    color: var(--baby-blue);
+}
+
+/* form */
+form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form * {
+    height: 30px;
+}
+
+label {
+    height: fit-content;
+    vertical-align: center;
+}
+
+#search-button {
+    width: 10%;
+    background-color: var(--baby-blue);
+    color: var(--navy-blue);
+    font-weight: bold;
+    border: 1px solid var(--baby-blue);
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: var(--navy-blue);
+    color: var(--baby-blue);
+}
+
+#search-button:active {
+    color: var(--navy-blue);
+}
+
+input {
+    width: 60%;
+    color: var(--navy-blue);
+    text-align: start;
+    padding: 5px;
+}
+
+
+/* pokemon card */
+#pokemon-card {
+    width: 100%;
+    padding: 20px;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid var(--baby-blue);
+}
+
+table, #pokemon-info {
+    width: 50%;
+    height: 100%;
+}
+
+/* pokemon info */
+#pokemon-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#pokemon-info div {
+    display: flex;
+    /*justify-content: flex-start;*/
+    gap: 10px;
+}
+
+#pokemon-info span {
+    display: block;
+    width: fit-content;
+    text-align: start;
+}
+
+#name-id {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#name-id div{
+    width: 50%;
+}
+
+#buttons {
+    width: 100%;
+    justify-content: space-between;
+    padding-right: 10px;
+    margin-top: 10px;
+    align-items: flex-end;
+}
+
+#front-btn {
+    align-self: end;
+}
+
+#back-btn, #front-btn {
+    width: 20px;
+    height: 20px;
+    font-weight: bold;
+    border-radius: 50%;
+    border: 1px solid var(--baby-blue);
+    background-color: var(--baby-blue);
+    color: var(--navy-blue);
+}
+
+#back-btn:hover, #front-btn:hover {
+    background-color: var(--navy-blue);
+    color: var(--baby-blue);
+}
+
+#back-btn:active, #front-btn:active {
+    color: var(--navy-blue);
+}
+
+#name-id span{
+    font-size: larger;
+    font-weight: bolder;
+    color: var(--baby-blue);
+}
+
+#image-container {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#types span {
+    border: 1px solid var(--light-blue);
+    padding: 5px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    border-bottom: 2px solid var(--light-blue);
+    text-align: start;
+    color: inherit;
+    padding-left: 5px;
+}
+
+th {
+    font-size: large;
+    font-weight: bolder;
+}
+
+tr:hover {
+    background-color: var(--light-blue);
+    color: var(--navy-blue);
+}

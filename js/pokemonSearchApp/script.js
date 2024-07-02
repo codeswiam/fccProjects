@@ -7,6 +7,11 @@ const pokemonHeight = document.getElementById('height');
 const imageContainer = document.getElementById('image-container');
 const pokemonType = document.getElementById('types');
 
+let currentPokemonId;
+
+const frontBtn = document.getElementById('front-btn');
+const backBtn = document.getElementById('back-btn');
+
 let pokemonDataArr = [];
 
 const fetchAllData = async () => {
@@ -46,7 +51,7 @@ const showData = ({name, id, weight, height, sprites, stats, types}) => {
     pokemonHeight.textContent = `Height: ${height}`;
 
     imageContainer.innerHTML = `
-    <img src="${sprites.front_default}" id="sprite" alt="Sprite of ${name}">  
+    <img src="${sprites.front_default}" id="sprite" alt="Sprite of ${name}" style="width: 300px; height: 300px;">  
   `;
 
     pokemonType.innerHTML = "";
