@@ -149,6 +149,7 @@ table, #pokemon-info {
     border: 1px solid var(--baby-blue);
     background-color: var(--baby-blue);
     color: var(--navy-blue);
+    cursor: pointer;
 }
 
 #back-btn:hover, #front-btn:hover {
@@ -158,6 +159,12 @@ table, #pokemon-info {
 
 #back-btn:active, #front-btn:active {
     color: var(--navy-blue);
+}
+
+#back-btn:disabled, #front-btn:disabled {
+    border: 1px solid gray;
+    color: gray;
+    cursor: not-allowed;
 }
 
 #name-id span{

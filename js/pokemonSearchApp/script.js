@@ -27,8 +27,9 @@ const fetchAllData = async () => {
 fetchAllData();
 
 const searchForPokemonName = (data, pokemonName) => {
-    for (let {name, url} of data) {
+    for (let {name, id,  url} of data) {
         if (name === pokemonName) {
+            currentPokemonId = id;
             return url;
         }
     }
@@ -38,6 +39,7 @@ const searchForPokemonName = (data, pokemonName) => {
 const searchForPokemonID = (data, pokemonID) => {
     for (let {id, url} of data) {
         if (id === pokemonID) {
+            currentPokemonId = id;
             return url;
         }
     }
@@ -72,6 +74,29 @@ const fetchData = async (url) => {
     showData(data);
 }
 
+const getPokemon = (id) => {
+    url = searchForPokemonID(pokemonDataArr, id);
+    fetchData(url);
+}
+
+const previousPokemon = () => {
+    if (currentPokemonId - 1 > 0) {
+        currentPokemonId -= 1;
+        getPokemon(currentPokemonId);
+    } else {
+        alert("You've reached the first pokemon.")
+    }
+}
+
+const nextPokemon = () => {
+    if (currentPokemonId + 1 <= 1025 ) {
+        currentPokemonId += 1;
+        getPokemon(currentPokemonId);
+    } else {
+        alert("You've reached the last pokemon.")
+    }
+}
+
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     const searchInput = input.value;
@@ -93,4 +118,11 @@ form.addEventListener("submit", (e) => {
     }
 
     fetchData(url);
+
+    frontBtn.disabled = false;
+    backBtn.disabled = false;
 })
+
+frontBtn.addEventListener("click", nextPokemon);
+
+backBtn.addEventListener("click", previousPokemon);
