@@ -10,18 +10,41 @@
 </head>
 <body>
 <main>
-    <h1>Cash Register</h1>
+    <h1>CASH REGISTER</h1>
     <div class="form-container">
         <form id="form">
             <label for="cash">Enter cash provided by the customer:</label>
             <input type="number" id="cash" step="0.01">
             <div id="button-container">
-                <button type="submit" id="purchase-btn">Check</button>
+                <button type="submit" id="purchase-btn">CHECK</button>
             </div>
         </form>
     </div>
     <div id="change-container">
         <p id="change-due">Result will appear here.</p>
+    </div>
+    <div id="cash-register">
+        <div id="price"></div>
+        <div id="empty"></div>
+        <div id="main-part">
+            <div id="left-side">
+                <div id="keycaps">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div id="change"></div>
+        </div>
+        <div id="drawer">
+            <div id="circle"></div>
+        </div>
     </div>
 </main>
 <script src="./script.js"></script>

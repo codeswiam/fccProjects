@@ -13,15 +13,32 @@ let cid = [
 
 const cashInput = document.getElementById('cash');
 const form = document.getElementById('form');
+const cidElt = document.getElementById('change');
 const changeDue = document.getElementById('change-due');
 
-const showChangeDue = (status, change) => {
-    changeDue.textContent = `Status: ${status}`;
-    if (change.length > 0) {
-        change.forEach((elt) => {
-            changeDue.textContent += ` ${elt[0]}: $${elt[1]}`;
+window.onload = function () {
+    document.getElementById("price").textContent = `Price: $${price}`;
+    showCID();
+}
+
+const showCID = () => {
+    cidElt.innerHTML = `<strong>CASH IN DRAWER:</strong><br>`;
+    if (cid.length > 0) {
+        cid.forEach((elt) => {
+            cidElt.innerHTML += ` ${elt[0]}: $${elt[1]}<br>`;
         });
     }
+}
+
+const showChangeDue = (status, change) => {
+    changeDue.innerHTML = `Status: ${status}<br>`;
+    if (change.length > 0) {
+        change.forEach((elt) => {
+            changeDue.innerHTML += ` ${elt[0]}: $${elt[1]}<br>`;
+        });
+    }
+    cid.reverse();
+    showCID();
 }
 
 const checkCashRegister = (price, cash, cid) => {
@@ -89,5 +106,5 @@ const calculateChange = () => {
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     calculateChange();
-})
+});
 
