@@ -53,7 +53,7 @@ const showData = ({name, id, weight, height, sprites, stats, types}) => {
     pokemonHeight.textContent = `Height: ${height}`;
 
     imageContainer.innerHTML = `
-    <img src="${sprites.front_default}" id="sprite" alt="Sprite of ${name}" style="width: 300px; height: 300px;">  
+    <img src="${sprites.front_default}" id="sprite" alt="Sprite of ${name}">  
   `;
 
     pokemonType.innerHTML = "";
