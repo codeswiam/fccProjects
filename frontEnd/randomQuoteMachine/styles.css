@@ -1,0 +1,82 @@
+:root {
+    --black: #222831;
+    --dark-gray: #393E46;
+    --light-gray: #EEEEEE;
+    --teal: #00ADB5;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--light-blue);
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    font-family: "Maname", sans-serif;
+    background-color: var(--black);
+    color: var(--light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#quote-box {
+    border: 5px double var(--light-gray);
+    border-radius: 5px;
+    width: 450px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+#text {
+    font-size: 30px;
+    text-align: center;
+}
+
+#author{
+    font-size: 20px;
+    text-align: end;
+}
+
+#buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+i {
+    font-family: sans-serif;
+}
+
+.btn {
+    padding: 0 10px 0 10px;
+    height: 40px;
+    color: var(--light-gray);
+    font-weight: bold;
+    background-color: var(--teal);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: var(--teal);
+    background-color: var(--light-gray);
+}
+
+.btn:active {
+    color: var(--light-gray);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
